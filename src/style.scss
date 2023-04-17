@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;500;700&display=swap");
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+$font-stack: "Roboto Mono", monospace;
+$primary-color: #deaf23;
+$secondary-color: #53fa5e;
+$button-hover: #da72e6;
+$light-color: #fff;
+$font-light-grey: #d5d5d5;
+$dark-color: #333;
+
+html {
+  font-family: $font-stack;
+  color: $dark-color;
+  font-size: 14px;
+  background-color: $dark-color;
+}
+
+body {
+  display: flex;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-color: $secondary-color;
+  max-width: 100%;
+
+  img {
+    max-width: 300px;
+    height: auto;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    width: 25ch;
+
+    p {
+      font: $font-light-grey;
+    }
+
+    span {
+      font: $button-hover;
+    }
+
+    button {
+      font: inherit;
+      background-color: $primary-color;
+      border: none;
+      border-radius: 5px;
+      margin: 2em 0 0;
+      padding: 0.65em 1.5em;
+      cursor: pointer;
+      transition: 0.3s all ease-in-out;
+
+      &:hover {
+        background-color: $button-hover;
+        color: $light-color;
+      }
+    }
+  }
+}
